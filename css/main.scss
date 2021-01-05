@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    
+}
+:root{
+    --cor-titulos : #2f898d;
+    --cor-paragrafos:#6d4c05;
+    --cor-fundo: #ffffff;
+    --cor-stt-venda : rgb(243, 199, 6);
+    --cor-stt-alug: rgb(108, 143, 14);
+    --cor-stt-temp: rgb(247, 79, 1);
+    --cor-btn-verde:#2f898d;
+
+}
+// Area-Topo
+body{
+    overflow-x: hidden;
+    background-color: var(--cor-fundo) !important ;
+}
+.topo{
+    .navbar{
+        background-color:  var(--cor-fundo)  ;
+        border-radius: 0 0 10px 10px ;
+        border-bottom: 2px solid #ede8dd6b;
+        .navbar-brand{
+            img{
+                width: 180px;
+            }
+        }
+        .navbar-toggler{
+            border: none;
+            outline: none;
+           color: white;
+            
+            .navbar-toggler-icon{
+              color: var(--cor-btn-verde);
+            }
+            
+        }
+        #nav-topo{
+            li{
+                &.active{
+                    a{
+                        font-weight: 500;
+                        color: var(--cor-titulos);
+                    }
+                }
+                a{
+                    color: rgb(95, 95, 87);
+                    &:hover{
+                        color: #439ba0;
+                    }
+                }
+            }
+        }
+        .area-btn{
+            button{
+                &.anunciar{
+                    &:hover{
+                        background-color: #c9c6c6;
+                    }
+                }
+                &.login{
+                    color: white;
+                    background-color: var(--cor-btn-verde);
+                    &:hover{
+                        background-color:#185255 ;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media(max-width:991px){
+    .navbar-nav {
+        justify-content: center;
+        align-items: center;
+    }
+    .area-btn{
+        display: flex;
+        flex-direction: column;
+      .btn{
+          margin-top: 5px;
+      }
+    }
+    
+}
+
+//Area conteudo
+
+    
+.conteudo1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //Titulo
+    .titulo-site{
+        text-align: center;
+        
+        .titulo{
+            color: var(--cor-titulos);
+        }
+        .paragrafo{
+            color: var(--cor-paragrafos);
+        }
+    }
+    //Area Pesquisa{
+        .area-pesquisa{
+            width: 100%;
+          
+            display: flex;
+            flex-direction: column;
+       
+        
+            align-items: center;
+            #area-imagem-pesquisa{
+                position: relative;
+                overflow: hidden;
+                width: 100vw;
+                height: 400px;
+                
+                img{
+                    width: 100%;
+                    
+                    
+                }
+            }
+            #caixa-pesquisa{
+               
+                position: absolute;
+                margin-top: 155px;
+                margin-bottom: 50px;
+                background-color: #fffdf5;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border: 2px solid #b9b7c1;
+               
+                p{
+                    color: #747574;
+                }
+                
+            #area-tipoServico{
+                input{
+                    display: none;
+                }
+                
+               .area-checkbox-situ{
+                   display: flex;
+                .btn-label{
+                    border: 1px solid #e0cec773;
+                       border-radius: none;
+                       padding: 10px;
+                       margin-bottom: 5px;
+                       color: #2f898d;
+                       font-size: 13px;
+                       cursor: pointer;
+                       &:hover{
+                           background-color: #fff9eb;
+                       }
+                    }
+                }
+               input{
+                display: none;
+                
+                &#temporada:checked ~ .label-temp{
+                     background-color:#2f898d;
+                     color: white;
+                }
+                &#aluguel:checked ~ .label-al{
+                 background-color:#2f898d;
+                 color: white;
+            }
+                 &#compra:checked ~ .label-comp{
+                     background-color:#2f898d;
+                     color: white;
+             
+             }
+         
+}
+ 
+}
+            #area-tipoImovel{
+                
+            }
+            #area-localidade{
+                #local-imovel{
+                    .area-local-imovel{
+                        #pesquisa-local{
+                            &::placeholder{
+                                transition: transform 0.4s ;
+                            }
+                            &:focus{
+                                &::placeholder{
+                                    font-size: 10px;
+                                    transform: translateY(-8px);
+                                    padding-left: 5px;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #area-botao{
+                margin-top: 40px;
+                justify-content: center;
+                align-items: center;
+
+                .btn{
+                    color: white;
+                    background-color: #2f898d;
+                    &:hover{
+                        background-color:#185255 ;
+                    }
+                }
+            }
+        }
+        }
+}
+.conteudo2{
+    h2{
+        color: var(--cor-titulos);
+        
+       
+        border-bottom: 2px solid #ede8dd6b;
+    }
+    .area-cards{
+        margin-bottom: 80px;
+        padding-bottom: 50px;
+        border-bottom: 2px solid #ede8dda9 ;
+        .slide-area{
+    
+            .area-setas{
+                display: flex;
+                justify-content: center;
+             .setas{
+                 padding: 5px;
+                 i{
+                     color: var(--cor-btn-verde);
+                 }
+             }
+            }
+         }
+        .btn{
+            color: white;
+            background-color: var(--cor-btn-verde);
+            &:hover{
+                background-color:#185255 ;
+            }
+        }  
+        
+        .card-body{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+                .card-title{
+                    color: var(--cor-titulos);
+                }
+                p{
+                    &.status-venda{
+                        color: var(--cor-stt-venda);
+                    }
+                    &.status-aluguel{
+                        color: var(--cor-stt-alug);
+                    }
+                    &.status-temporada{
+                        color: var(--cor-stt-temp);
+                    }
+
+                    &.endereco-imovel{
+                        color: var(--cor-paragrafos);
+                    }
+                }
+
+        }
+            
+            
+        
+    }
+}
+
+@media(max-width:768px){
+   
+    .conteudo1 .area-pesquisa #caixa-pesquisa {
+        margin-top: 0;
+    }
+    .conteudo2{
+        margin-top: 376px;
+    }
+    .conteudo2 h2 {
+        font-size: 24px;
+        margin-top: 30px;
+   }
+   .area-cards{
+       margin-bottom: 90px;
+       margin-top: 50px;
+   }
+
+}
+
+
+
+.area-parceiros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        color: var(--cor-titulos);
+        margin-bottom: 40px;
+       
+        border-bottom: 2px solid #ede8dd6b;
+    }
+}
+@media(max-width:768px){
+   
+    .area-parceiros  h2 {
+        font-size: 24px;
+        margin-top: 30px;
+   }
+  
+
+}
+
+//Footer
+//Footer
+footer{
+    &.card{
+        background: none !important;
+    }
+}
+.area-footer{
+ 
+    width:100vw;
+    height: 40vh;
+    background-color: var(--cor-titulos); 
+    overflow: hidden;
+    .conteudo-footer{
+        overflow: hidden;
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        justify-content:space-between;
+        padding-top: 30px;
+        .logo{
+            img{
+                width: 201px;
+            }
+            
+        }
+        .titulo{
+            color: #24f8ff;
+            font-size: 22px;
+        }
+        .coluna{
+            a{
+                color: #ffffff ;
+                text-decoration: none;
+                transition: 0.5s;
+                &:hover{
+                    color: #c6fdff;
+                }
+            }
+        }
+        .redes{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .area-icons{
+                i{
+                    font-size: 40px;
+                    color: white;
+                    padding: 8px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #021f20;
+                    }
+                }
+            }
+            .contato-btn{
+                text-align: center;
+                color: white;
+                background-color: #0d4144;
+                &:hover{
+                    color: white;
+                    background-color: #021f20;
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width:767px){
+    .area-footer {
+        width: 100vw;
+        height: 120vh;
+        max-height: 700px;
+        background-color: #2F898D;
+    }
+   .area-footer .conteudo-footer{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content:space-between;
+        padding-top: 30px;
+        text-align: center;
+    }
+}
+
+//Area direitos
+
+.direitos{
+    overflow: hidden;
+    width: 100vw;
+    height: 30px;
+    background-color: #1a5f63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 15px;
+        color: white;
+        padding-top: 10px;
+    }
+}
